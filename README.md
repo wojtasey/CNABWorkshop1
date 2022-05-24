@@ -15,6 +15,20 @@ file.
 This is a bash script where you can place helper functions that you can call
 from your porter.yaml file.
 
+## Install Docker
+
+Get latest Docker installation from this page
+
+https://docs.docker.com/desktop/windows/install/
+
+## Install Ubuntu 22.04 LTS
+
+Get latest WSL2 - Ubuntu 22.04 from Microsoft Store.
+After instalation please run below command in command line:
+
+```bash
+wsl -l -v
+```
 
 ## Fixing problems with CERTIFICATES under WSL2
 ```bash
