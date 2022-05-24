@@ -20,6 +20,10 @@ from your porter.yaml file.
 Your PC should have at least 16GB RAM (recommended 32 GB RAM).
 Virtualization should be enabled in BIOS.
 
+## Prepare your accesses - enable internet access on WSL
+
+In some companies, Internet Access on WSL can be blocked. If you have such problems, please get in touch with your InfoSec consultant so your machine can be added to the security policy that allows accessing the internet. 
+
 ## Install Docker
 
 Get latest Docker installation from this page
