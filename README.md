@@ -41,10 +41,11 @@ porter mixins install jq --url https://github.com/squillace/porter-jq/releases/d
 https://github.com/settings/tokens
 
 2. Implement token in WSL
+
  ```bash
 export CR_PAT=<put here your token which you can get from previous step>
 
-echo $CR_PAT | docker login ghcr.io -u wojtasey --password-stdin
+echo $CR_PAT | docker login ghcr.io -u <Github user name (not email address)> --password-stdin
 
 export no_proxy=ghcr.io
 
