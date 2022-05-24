@@ -30,14 +30,18 @@ https://docs.docker.com/desktop/windows/install/
 
 Get latest WSL2 - Ubuntu 22.04 from Microsoft Store.
 More information here: https://docs.microsoft.com/en-us/windows/wsl/install
+
 After instalation please run below command in command line:
 
 ```bash
 wsl -l -v
 ```
+You should be able to see below screen:
 ![MicrosoftTeams-image](https://user-images.githubusercontent.com/87713372/170029242-23d39155-0c70-4776-a0a6-c22572f5fdf5.png)
 
-You should be able to see below screen 
+The version of the Ubuntu-20.04 or Ubuntu 22.04 must be 2.
+The  default instance of WSL should be Ubuntu 20.04 or 22.04 (not docker-desktop-....)
+
 ## Fixing problems with CERTIFICATES under WSL2
 ```bash
 sudo openssl s_client -showcerts -connect porter.sh </dev/null 2>/dev/null|openssl x509 -outform PEM > proxygg22.crt
