@@ -15,6 +15,25 @@ file.
 This is a bash script where you can place helper functions that you can call
 from your porter.yaml file.
 
+
+## Fixing problems with CERTIFICATES under WSl2
+
+sudo openssl s_client -showcerts -connect porter.sh </dev/null 2>/dev/null|openssl x509 -outform PEM > proxygg22.crt
+sudo cp proxygg.crt /usr/local/share/ca-certificates/
+
+sudo update-ca-certificates
+
+
+## Installing mixins
+
+porter mixins install pac --url https://github.com/squillace/porter-pac/releases/download --version v0.1.3
+
+porter mixins install yq --url https://github.com/squillace/porter-yq/releases/download --version v0.1.0
+
+porter mixins install jq --url https://github.com/squillace/porter-jq/releases/download --version v0.1.0
+
+
+
 ## README.md
 
 This explains the files created by `porter create`. It is not used by porter and
