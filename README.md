@@ -16,23 +16,41 @@ This is a bash script where you can place helper functions that you can call
 from your porter.yaml file.
 
 
-## Fixing problems with CERTIFICATES under WSl2
-
+## Fixing problems with CERTIFICATES under WSL2
+```bash
 sudo openssl s_client -showcerts -connect porter.sh </dev/null 2>/dev/null|openssl x509 -outform PEM > proxygg22.crt
+
 sudo cp proxygg.crt /usr/local/share/ca-certificates/
 
 sudo update-ca-certificates
-
+```
 
 ## Installing mixins
-
+```bash
 porter mixins install pac --url https://github.com/squillace/porter-pac/releases/download --version v0.1.3
 
 porter mixins install yq --url https://github.com/squillace/porter-yq/releases/download --version v0.1.0
 
 porter mixins install jq --url https://github.com/squillace/porter-jq/releases/download --version v0.1.0
+```
 
+## Publishing bundles to Github Container Registry
 
+1. Generate token on Github account - Settings - Developer Settings - Personal access tokens
+
+https://github.com/settings/tokens
+
+2. Implement token in WSL
+ ```bash
+export CR_PAT=<put here your token which you can get from previous step>
+
+echo $CR_PAT | docker login ghcr.io -u wojtasey --password-stdin
+
+export no_proxy=ghcr.io
+
+porter publish --insecure-registry
+
+ ```
 
 ## README.md
 
