@@ -15,6 +15,11 @@ file.
 This is a bash script where you can place helper functions that you can call
 from your porter.yaml file.
 
+## Prepare your machine
+
+Your PC should have at least 16GB RAM (recommended 32 GB RAM).
+Virtualization should be enabled in BIOS.
+
 ## Install Docker
 
 Get latest Docker installation from this page
@@ -24,12 +29,15 @@ https://docs.docker.com/desktop/windows/install/
 ## Install Ubuntu 22.04 LTS
 
 Get latest WSL2 - Ubuntu 22.04 from Microsoft Store.
+More information here: https://docs.microsoft.com/en-us/windows/wsl/install
 After instalation please run below command in command line:
 
 ```bash
 wsl -l -v
 ```
+![MicrosoftTeams-image](https://user-images.githubusercontent.com/87713372/170029242-23d39155-0c70-4776-a0a6-c22572f5fdf5.png)
 
+You should be able to see below screen 
 ## Fixing problems with CERTIFICATES under WSL2
 ```bash
 sudo openssl s_client -showcerts -connect porter.sh </dev/null 2>/dev/null|openssl x509 -outform PEM > proxygg22.crt
