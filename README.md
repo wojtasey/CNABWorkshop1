@@ -1,20 +1,3 @@
-# My First Bundle
-
-This is an empty bundle that porter has created to get you started!
-
-# Contents
-
-## porter.yaml
-
-This is the porter manifest. See https://porter.sh/author-bundles/ for 
-details on every field and how to configure your bundle. This is a required
-file.
-
-## helpers.sh
-
-This is a bash script where you can place helper functions that you can call
-from your porter.yaml file.
-
 ## Prepare your machine
 
 Your PC should have at least 16GB RAM (recommended 32 GB RAM).
